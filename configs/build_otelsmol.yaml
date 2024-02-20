@@ -1,0 +1,15 @@
+dist:
+  name: otelsmol
+  description: Basic OTel Collector distribution for Developers
+  output_path: ./otelsmol
+
+exporters:
+  - gomod: go.opentelemetry.io/collector/exporter/otlphttpexporter v0.94.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/fileexporter v0.94.0
+
+processors:
+  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.94.0
+
+receivers:
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusreceiver v0.94.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver v0.94.0
